@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
-import Filter from './Filter/Filter';
-import ContactForm from './ContactForm/ContactForm';
-import ContactsList from './ContactList/ContactList';
+import Filter from './components/Filter/Filter';
+import ContactForm from './components/ContactForm/ContactForm';
+import ContactsList from './components/ContactList/ContactList';
 import { AppWrapper, Title } from './App.styled';
 
 class App extends Component {
