@@ -38,8 +38,6 @@ class App extends Component {
     if (this.state.contacts !== prevState.contacts) {
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
-    console.log(prevState);
-    console.log(this.state);
   }
   addContact = ({ name, number }) => {
     const { contacts } = this.state;
