@@ -41,11 +41,7 @@ class App extends Component {
   }
   addContact = ({ name, number }) => {
     const { contacts } = this.state;
-    const contact = {
-      id: nanoid(),
-      name,
-      number,
-    };
+
     if (
       contacts.find(
         contact => contact.name.toLowerCase() === name.toLowerCase(),
@@ -53,6 +49,11 @@ class App extends Component {
     ) {
       Notiflix.Notify.warning(`${name} is already in contacts`);
     } else {
+      const contact = {
+        id: nanoid(),
+        name,
+        number,
+      };
       this.setState(prevState => ({
         contacts: [...prevState.contacts, contact],
       }));
